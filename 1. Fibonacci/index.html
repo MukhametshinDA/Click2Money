@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<script>
+			function fibbo() {
+	
+				str=document.getElementById('text1').value;
+				text="0,1";
+				t1=0;
+				t2=1;
+				for (let i=0; i<str-2; i++) {
+					t3=t1+t2;
+					text=text+","+t3;
+					t1=t2;
+					t2=t3;
+				}
+				document.getElementById('result').innerHTML = text;
+			}
+		</script>
+        <meta charset="UTF-8">
+        <title>Последовательность Фибоначчи</title>
+	</head>
+	<body>
+		<h2>Последовательность Фибоначчи</h2>
+		<br>
+		<form>
+			<label>Введите количиество чисел, которое необходимо получить согласно последовательности Фибоначчи<label>
+			<br>
+			<br>
+			<input type="text" id="text1"></input>
+			<br>
+			<br>
+			<input type="button" onclick="fibbo()" value="Получить">
+			<br>
+			<br>
+			<div id="result"></div>
+		</form>
+	</body>
+</html>
